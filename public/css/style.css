@@ -1,0 +1,332 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, 
+ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article,aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; box-sizing: border-box; color: white; text-transform: none; text-decoration: none; list-style: none;}
+
+/* 
+code couleur :
+#1B2838
+#407999
+#2A3E59
+*/
+
+a:hover{color: white;}
+
+html{font-size : 100%; font-family: 'Karla', sans-serif;}
+
+body{background-color: #1B2838;}
+
+.initmarg{margin: 0;}
+.initpad{padding: 0;}
+
+.title1{margin-bottom: 1.2rem; padding: 0.5rem 0; background: linear-gradient(0.25turn, rgba(27, 40, 56, 1)5%, rgba(42, 62, 89, 1), rgba(27, 40, 56, 1)95%); border-radius: 5px; font-size: 1.2rem; text-align: center;}
+.title2{font-size: 1rem; text-align: center;}
+.title3{margin: 2.5rem 0 1rem 0; font-size: 1.6rem; font-weight: bold;}
+.title-green{color: #198754;}
+.title-green:hover{color: #0d6efd; transition: 0.5s;}
+
+.hover-blue:hover{color: #407999 !important; font-weight: bold; box-shadow: 0px 0px 10px 1px #407999; transition: 0.5s; background: none; background-color: #1B2838!important;}
+
+.hover-rotation:hover{transform: rotate(20deg); transition: transform 0.5s;}
+
+.active-menu{color: #407999; font-weight: bold; box-shadow: 0px 0px 10px 1px #407999; background-color: #1B2838!important;}
+.active-accordion{background-color: #2a3e59!important; box-shadow: 0px 0px 10px 1px #407999!important;}
+
+.italic{font-style: italic;}
+
+form .field:nth-child(1n+2){margin-top: 0.7rem;}
+form .field #block-conditions-password ul{margin-left: 2rem;}
+form .field #block-conditions-password ul li{list-style: circle;}
+
+.condition-password-valid{color: #198754;}
+.condition-password-not-valid{color: #dc3545;}
+
+/* Color code for items quality */
+.commun{box-shadow: 0px 0px 13px 3px #B3B3B3; border: solid 0px #B3B3B3;}
+.inhabituel{box-shadow: 0px 0px 13px 3px #3F3; border: solid 0px #3F3;}
+.rare{box-shadow: 0px 0px 13px 3px #334CFF; border: solid 0px #334CFF;}
+.épique{box-shadow: 0px 0px 13px 3px #7F33ff; border: solid 0px #7F33ff;}
+.légendaire{box-shadow: 0px 0px 13px 3px #FFF319; border: solid 0px #FFF319;}
+.mythique{box-shadow: 0px 0px 13px 3px #0FF; border: solid 0px #0FF;}
+
+.textcommun{color: #B3B3B3;}
+.textinhabituel{color: #3F3;}
+.textrare{color: #334CFF;}
+.textépique{color: #7F33ff;}
+.textlégendaire{color: #FFF319;}
+.textmythique{color: #0FF;}
+
+
+
+/* *********************************** */
+/* ---------- DESIGN BURGER ---------- */
+/* *********************************** */
+
+.block-burger .burger{padding: 0; width: 40px; height: 25px; cursor: pointer; position: relative;}
+.block-burger .burger span{display: block; position: absolute; top: 50%; transform: translateY(-50%); width: 100%; height: 4px; background-color: #407999; transition: 0.5s ease-in-out; border-radius: 5px;}
+.block-burger .burger span::before,
+.block-burger .burger span::after{content: ''; position: absolute; width: 100%; height: 4px; background-color: #407999; border-radius: 5px; transition: transform 0.5s ease-in-out;}
+.block-burger .burger span::before{transform: translateY(-12px);}
+.block-burger .burger span::after{transform: translateY(12px);}
+.block-burger .burger.burger-active span{background-color: transparent;}
+.block-burger .burger.burger-active span::before{transform: translateY(0px) rotate(45deg);}
+.block-burger .burger.burger-active span::after{transform: translateY(0px) rotate(-45deg);}
+
+
+
+/* **************************** */
+/* ---------- HEADER ---------- */
+/* **************************** */
+
+    /* ********************** */
+    /* ----- NAV BURGER ----- */
+    /* ********************** */
+
+header .nav-burger{position: fixed; width: 100%; padding: 1rem; background-color: #1B2838;   border-bottom: solid 1px #407999; box-shadow: 0px 0px 10px  #407999;}
+header .nav-burger .logo img{width: 2rem;}
+header .nav-burger .block-burger{width: auto;}
+
+
+    /* *************************** */
+    /* ----- LOGO AND SLOGAN ----- */
+    /* *************************** */
+
+header{position: relative; margin-bottom: 3rem; background-image: linear-gradient(rgba(27, 40, 56, 0), rgba(27, 40, 56, 0.9) 70%, rgba(27, 40, 56, 1) ), url("../image/website/header.jpg"); background-repeat: no-repeat; background-size: 100%; background-position: center;}
+header .block-logo{padding: 3rem 0;}
+header .block-logo .logo a{font-size: 2rem; color: blue;}
+header .block-server{padding: 0.5rem 1rem 0.8rem; border-bottom: solid 1px #407999; box-shadow: 0px 0px 10px #407999; border-top-left-radius: 5px; border-top-right-radius: 5px; border: solid 1px #407999;}
+
+
+    /* *************************** */
+    /* ----- SERVER SELECTED ----- */
+    /* *************************** */
+
+header .block-server .block-link{width: auto;}
+header .block-server .block-link a img{width: 3rem;}
+header .block-server .block-name .name{display: inline-block; font-size: 2rem; padding: 0.5rem 1rem; border-radius: 5px;}
+header .block-server .block-quit-server a{display: inline-block; font-size: 0.8rem; padding: 0.2rem 0.5rem; border-radius: 5px;}
+
+
+    /* ****************************** */
+    /* ----- SERVER NO SELECTED ----- */
+    /* ****************************** */
+
+header .block-server .block-server-no-selected .title{margin-bottom: 0.6rem; font-size: 1.5rem;}
+header .block-server .block-server-no-selected .info{margin-bottom: 0.4rem; font-size: 0.8rem;}
+header .block-server .block-server-no-selected form p{margin-top: 0.4rem;}
+header .block-server .block-server-no-selected form input[type="text"]{margin: auto; max-width: 15rem;}
+header .block-server .block-server-no-selected form input[type="submit"]{margin-top: 0.8rem; padding: 0.5rem 1rem; color: white; border: none; border-radius: 5px; background-color: rgba(42, 62, 89, 1);}
+
+
+    /* ********************** */
+    /* ----- CONNECTION ----- */
+    /* ********************** */
+
+header .block-connection{position: fixed; z-index: 1; top: 1.6rem; right: 1rem; text-align: end;}
+header .block-connection a{padding: 0.5rem 1rem; vertical-align: middle; font-size: 1.1rem; background-color: #2A3E59; border-radius: 5px;}
+
+
+
+/* ************************** */
+/* ---------- MENU ---------- */
+/* ************************** */
+
+    /* *********************** */
+    /* ----- NAV MOBILE ----- */
+    /* *********************** */
+
+.menu .nav-mobile{position: fixed; top: 0; right: 0; z-index: 2; width: 250px; height: 100vh; background-color: #111827; transform: translateX(100%); transition: 0.5s transform cubic-bezier(.79,.32,.2,1);}
+.menu .nav-mobile.active{transform: initial; display: block;}
+.menu .nav-mobile .block-burger{padding: 1rem; right: 0;}
+.menu .nav-mobile .block-menu .title{margin: 2rem 1rem 1.2rem;}
+.menu .nav-mobile .block-menu .title a{display: block; padding: 0.2rem; background: linear-gradient(0.25turn, #111827 5%, rgba(42, 62, 89, 1), #111827 95%); text-align: center; font-size: 1.4rem;}
+.menu .nav-mobile .block-menu ul,
+.menu .nav-mobile .block-menu .connection{margin-left: 2rem;}
+.menu .nav-mobile .block-menu ul li a,
+.menu .nav-mobile .block-menu .connection a{display: inline-block; padding: 0.2rem 0.5rem; border-radius: 5px; font-size: 1.2rem;}
+.menu .nav-mobile .block-menu ul li:nth-child(1n+2){margin-top: 0.6rem;}
+.menu .mobile-overlay{position: fixed; top: 0; left: 0; z-index: 1; width: 100vw; height: 100vh; background-color: rgba(0, 0, 0, 0.6); display: none;}
+.menu .mobile-overlay.active{display: block;}
+
+
+    /* *********************** */
+    /* ----- NAV DESKTOP ----- */
+    /* *********************** */
+
+.menu nav .nav-desktop .block-menu{position: relative;}
+.menu nav .nav-desktop .block-menu .second-menu{background-color: #141e29;}
+.menu nav .nav-desktop .block-menu .second-menu:hover{color: #407999; box-shadow: 0px 0px 10px 1px #407999; transition: 0.5s;}
+.menu nav .nav-desktop .block-menu .logo{padding: 0; position: absolute; top: 0; left: 0;}
+.menu nav .nav-desktop .block-menu .logo img{height: 100%;}
+.menu nav .nav-desktop .block-menu ul li{margin: 0 0.1rem; padding: 0 0.2rem;}
+.menu nav .nav-desktop .block-menu ul li a{padding: 0.5rem 1rem; border-radius: 5px;}
+.menu nav .nav-desktop .block-menu .search-logo button{background: none; border: none;}
+.menu nav .nav-desktop .block-menu .search-logo button svg{padding: 0.2rem 0.8rem; height: 2.3rem; background-color: #2A3E59; border-radius: 5px;}
+.menu nav .nav-desktop .block-menu .search-logo button svg:hover{stroke: #407999;}
+
+
+
+/* ******************************** */
+/* ---------- CONNECTION ---------- */
+/* ******************************** */
+
+.connection .block-title{font-size: 2rem; font-weight: bold;}
+
+
+
+/* ******************************** */
+/* ---------- PAGINATION ---------- */
+/* ******************************** */
+
+.pagination a.svg {width: auto; margin: 0 1rem; padding: 0;}
+.pagination a svg{background-color: #2A3E59; padding: 0.3rem 0.4rem; height: 2rem; border-radius: 5px;}
+.pagination .page{margin: 0 0.2rem; text-align: center; width: 1.7rem; padding: 0.4rem 0; border-radius: 5px;}
+.pagination .page-selected{background-color: #1B2838; color: #407999; font-weight: bold; box-shadow: 0px 0px 10px 1px #407999;}
+.pagination .page-no-selected{background-color: #2A3E59;}
+
+
+
+/* **************************** */
+/* ---------- MARKET ---------- */
+/* **************************** */
+
+.homepage .block-section .section1 .block-filter1 div{margin-bottom: 0.7rem;}
+.homepage .block-section .section1 .block-filter1 div a{margin: 0.5rem 0.2rem 0rem;; padding: 0.3rem 1rem; font-size: 0.8rem; border-radius: 5px; background-color: #2A3E59;}
+
+.homepage .block-section .section2 .block-offers{margin-bottom: 2rem;}
+.homepage .block-section .section2 .block-offers .block-filter2{margin-bottom: 2rem;}
+.homepage .block-section .section2 .block-offers .block-filter2 ul li{margin-right: 1rem;}
+.homepage .block-section .section2 .block-offers .block-filter2 ul li a{padding: 0.2rem 0.6rem; font-size: 0.9rem; border-radius: 15px; background-color: #2A3E59;}
+.homepage .block-section .section2 .block-offers .block{margin: 0 0.1rem 1.5rem; border-radius: 5px;}
+.homepage .block-section .section2 .block-offers .block .subblock{padding: 0.3rem 0.6rem;}
+.homepage .block-section .section2 .block-offers .block .subblock div p{overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+.homepage .block-section .section2 .block-offers .block .subblock .block-name,
+.homepage .block-section .section2 .block-offers .block .subblock .block-prix{margin: 0.5rem 0;}
+.homepage .block-section .section2 .block-offers .block .subblock .block-quality{margin-top: 0.5rem;}
+.homepage .block-section .section2 .block-offers .block .subblock .block-illustration{padding: 0;}
+.homepage .block-section .section2 .block-offers .block .subblock .block-illustration img{margin: auto; width: 100%; height: fit-content;}
+.homepage .block-section .section2 .block-offers .block .block-server{ background-color: #F50; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px; padding: 0.2rem 0;}
+.homepage .block-section .section2 .block-offers .block .block-server p{font-size: 0.8rem;}
+
+.homepage .block-section .section2 .creature .block{box-shadow: 0px 0px 13px 3px rgba(0, 0, 0, 0.53);}
+.homepage .block-section .section2 .creature .block .subblock .block-features{margin-top: 0.9rem;}
+.homepage .block-section .section2 .creature .block .subblock .block-features .detail{padding: 0.2rem 0;}
+.homepage .block-section .section2 .creature .block .subblock .block-features .detail img{max-height: 25px!important;}
+.homepage .block-section .section2 .creature .block .subblock .block-features .detail p{text-align: center;}
+
+
+
+/* *************************** */
+/* ---------- STAND ---------- */
+/* *************************** */
+
+    /* **************** */
+    /* ----- DESK ----- */
+    /* **************** */
+
+.stand .desk .title3 p{line-height: 2.43rem}
+.stand .desk form .submit{margin-top: 1.5rem; width: auto;}
+.stand .desk .block-account .block-password form .field #block-password-conditions{margin-top: 0.4rem; font-size: 0.9rem;}
+
+.stand .desk .block-server .block-add-server form{margin-bottom: 2rem;}
+.stand .desk .block-server .block-account-server-list .accordion .accordion-item .accordion-header .accordion-button,
+.stand .desk .block-server .block-account-server-list .accordion .accordion-item .accordion-body{background-color: #1B2838;}
+.stand .desk .block-server .block-account-server-list .accordion .accordion-item .accordion-header .accordion-button:focus{box-shadow: none;}
+.stand .desk .block-server .block-account-server-list .accordion .accordion-item .accordion-header .accordion-button .name-server{padding-right: 2rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+.stand .desk .block-server .block-account-server-list .accordion .accordion-item .accordion-body .block-delete .btn-delete{margin-top: 1.5rem; background-color: #dc3545; border-color: #dc3545; width: auto;}
+.stand .desk .block-server .block-account-server-list .accordion .accordion-item .accordion-body .block-delete form .warning{margin-top: 1.5rem; width: auto;}
+.stand .desk .block-server .block-account-server-list .accordion .accordion-item .accordion-body .block-delete form .warning p{color: #842029;}
+
+.stand .desk .block-delete-account .delete-account{margin-top: 2.5rem;}
+.stand .desk .block-delete-account #btn-delete-account{font-size: 0.9rem; color: white; border: none; background-color: transparent; border-radius: 5px;}
+.stand .desk .block-delete-account #confirmation-delete-account{font-size: 1.1rem;}
+.stand .desk .block-delete-account #confirmation-delete-account .warning p{color: #842029;}
+
+
+    /* **************** */
+    /* ----- DESK ----- */
+    /* **************** */
+    
+.stand .stock .accordion .accordion-item .accordion-header .accordion-button{background-color: #1B2838;}
+.stand .stock .accordion .accordion-item .accordion button{background-color: #1B2838; border: none;}
+.stand .stock .accordion .accordion-item .accordion-header{position: relative;}
+.stand .stock .accordion .accordion-item .accordion-header .accordion-button:focus{box-shadow: none;}
+.stand .stock .accordion .accordion-item .accordion-header .accordion-button::after,
+.stand .stock .accordion .accordion-item .accordion-header .accordion-button:not(.collapsed)::after {background-image: none;}
+.stand .stock .accordion .accordion-item .accordion-header a{position: absolute; right: 1rem; z-index: 10;}
+
+.stand .stock .accordion .accordion-item .block-filter2{margin-bottom: 1.5rem;}
+.stand .stock .accordion .accordion-item .block-filter2 ul li{margin-right: 1rem;}
+.stand .stock .accordion .accordion-item .block-filter2 ul li a{padding: 0.2rem 0.6rem; font-size: 0.9rem; border-radius: 15px; background-color: #2A3E59;}
+
+.stand .stock .accordion .accordion-item .accordion-body{background-color: #1B2838; padding: 2rem 0; text-align: center;}
+.stand .stock .accordion .accordion-item .accordion-body .legend{margin-bottom: 0.3rem;}
+.stand .stock .accordion .accordion-item .accordion-body .legend p{font-size: 0.8rem;}
+.stand .stock .accordion .accordion-item .accordion-body .legend .features .details p{padding: 0 0.2rem;}
+.stand .stock .accordion .accordion-item .accordion-body .legend .features .details p:nth-child(even){color: grey;}
+.stand .stock .accordion .accordion-item .accordion-body .legend p{font-size: 0.8rem;}
+.stand .stock .accordion .accordion-item .accordion-body .block-offers .block-offer{border-top: 1px dashed white;}
+.stand .stock .accordion .accordion-item .accordion-body .block-offers .block-offer:last-child{border-bottom: 1px dashed white;}
+.stand .stock .accordion .accordion-item .accordion-body .block-offers .block-offer .features{padding: 1rem; cursor: pointer;}
+.stand .stock .accordion .accordion-item .accordion-body .block-offers .block-offer .features:hover p{color: #407999; transition: color .5s;}
+.stand .stock .accordion .accordion-item .accordion-body .block-offers .block-offer .features .details p{padding: 0 0.3rem;}
+.stand .stock .accordion .accordion-item .accordion-body .block-offers .block-offer .features .details p:nth-child(even){color: grey;}
+.stand .stock .accordion .accordion-item .accordion-body .block-offers .block-offer .action{text-align: center;}
+.stand .stock .accordion .accordion-item .accordion-body .block-offers .block-offer .action a {height: 1.5rem;}
+.stand .stock .accordion .accordion-item .accordion-body .block-offers .block-offer .action a svg{height: 100%;}
+.stand .stock .accordion .accordion-item .accordion-body .block-offers .block-offer .action a:hover{height: 1.7rem; transition: height .2s;}
+
+.stand .stock .accordion .accordion-item .accordion-body .pagination {margin-top: 1rem;}
+
+
+
+
+/* ******************************** */
+/* ---------- RESPONSIVE ---------- */
+/* ******************************** */
+
+@media (min-width: 576px) /* sm */{
+
+    .connection .block-connection .forgotten-password{width: auto; position: absolute; bottom: 0; right: 0;}
+}
+
+
+
+@media (min-width: 768px) /* md */{
+
+    .homepage .block-section .section2 .block-offers .block .subblock{padding: 1rem 0.2rem;}
+    .homepage .block-section .section2 .block-offers .block .subblock .block-name,
+    .homepage .block-section .section2 .block-offers .block .subblock .block-price{font-weight: bold;}
+    .homepage .block-section .section2 .block-offers .block .subblock .block-name{font-size: 1.2rem; margin: 0 0 1rem;}
+    .homepage .block-section .section2 .block-offers .block .subblock .block-price{margin: 1rem 0 0}
+
+}
+
+
+@media (min-width: 992px) /* lg */{
+
+    header .block-server .block-name{width: auto;}
+
+    .menu{position: sticky; top: 0; background-color: #1B2838; padding: 1rem; border-top: solid 1px #407999; border-bottom: solid 1px #407999; box-shadow: 0px 0px 10px  #407999; font-size: 1.3rem;}
+
+    .homepage .block-section .section1 .block-category .category{margin-bottom: 1rem;}
+}
+
+
+@media (min-width: 1200px) /* xl */{
+    .title2{margin-bottom: 0.7rem; font-size: 1.1rem;}
+    .homepage .block-section .section1 .block-filter1 div{margin-bottom: 1.6rem;}
+
+/*     .homepage .block-section .section2 .block-offers .block-filter2 ul{margin-left: 2rem;} */
+}
+
+
+@media (min-width: 1400px) /* xxl */{
+
+    .title1{margin-bottom: 2rem}
+    .homepage .block-section .section1 .block-filter1 div{margin-bottom: 1rem;}
+    .homepage .block-section .section1 .block-filter1 div a{margin: 0 0 0.7rem; font-size: 0.9rem;}
+    .homepage .block-section .section2 .block-offers .block-filter2{margin-bottom: 2.4rem;}
+    .homepage .block-section .section2 .block-offers .block .subblock{padding: 1.2rem 1.8rem;}
+    .homepage .block-section .section2 .block-offers .block .subblock .block-name{margin-bottom: 1.5rem; font-size: 1.4rem;}
+    .homepage .block-section .section2 .block-offers .block .subblock .block-name{font-size: 1.1rem}
+}
